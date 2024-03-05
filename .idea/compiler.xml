@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="collection-review" />
         <module name="generics" />
+        <module name="lambda" />
       </profile>
     </annotationProcessing>
   </component>

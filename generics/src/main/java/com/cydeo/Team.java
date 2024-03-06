@@ -1,7 +1,8 @@
 package com.cydeo;
 
 import java.util.ArrayList;
-
+// <T> for generic type
+// extends Player means that the Team will only accept Player. Will do type checking to prevent different objects that are not children of Player
 public class Team<T extends Player> {
 
     private String name;

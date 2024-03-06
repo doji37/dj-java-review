@@ -8,12 +8,10 @@ public class TeamTest {
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
+
 //        Team liverpool = new Team("Liverpool");
-
-        Team<SoccerPlayer> liverpool = new Team<>("Liverpool");
-
 //        Team<String> brokenTeam = new Team<>("this wont work");
-
+        Team<SoccerPlayer> liverpool = new Team<>("Liverpool");
 
 
 

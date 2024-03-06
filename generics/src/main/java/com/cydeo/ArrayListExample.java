@@ -12,6 +12,8 @@ public class ArrayListExample {
         items.add(2);
         items.add(3);
         items.add(4);
+
+//        Will not run into compile errors trying to add "apple". Will have runtime error if using generic ArrayList
 //        items.add("apple");
 
         printDouble(items);
@@ -20,6 +22,7 @@ public class ArrayListExample {
 
     private static void printDouble(ArrayList<Integer> items) {
 
+//        Need to cast it using (Integer) if using generic ArrayList
 //        for(Object i : items){
 //            System.out.println((Integer)i * 2);
 //        }

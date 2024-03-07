@@ -4,47 +4,61 @@ import java.util.*;
 
 public class ArrayListReview {
     public static void main(String[] args) {
-        // Create ArrayList and a class
-        List<Student> students= new ArrayList<>();
-        // Add Elements to ArrayList
-        students.add(new Student(1,"Jose"));
-        students.add(new Student(2,"Sayed"));
-        students.add(new Student(3,"Nick"));
-        students.add(new Student(4,"Ronnie"));
-        System.out.println(students);
-        // Iteration on ArrayLists
-        // 1. For Loop with get(index)
-        for(int i=0; i<students.size();i++) System.out.println(students.get(i));
-        // 2. Iterator
-        // Forward Iteration
-        System.out.println("Printing with Iterator Forward........");
 
-        Iterator iter= students.listIterator();
+        // create ArrayList of students
+        List<Student> studentList = new ArrayList<>();
+
+        // add students to ArrayList
+        studentList.add(new Student(1, "Jose"));
+        studentList.add(new Student(2, "Sayed"));
+        studentList.add(new Student(3, "Nick"));
+        studentList.add(new Student(4, "Ronnie"));
+        System.out.println(studentList);
+
+        // Iteration on ArrayList
+        // 1. Use legacy for loop
+        System.out.println("Using legacy for loop-------------");
+        for(int i = 0; i < studentList.size(); i++){
+            System.out.println(studentList.get(i));
+        }
+
+        System.out.println("Using Iterator-------------");
+        // 2. Use Iterator
+        // Forward iteration
+        // List is able to implement Iterable because List extends Iterable.
+        // Iterable -> Collections -> List
+        Iterator iter = studentList.listIterator();
         while(iter.hasNext()){
             System.out.println(iter.next());
         }
 
-        // Backwards Iteration
-        System.out.println("Printing with Iterator Backwards........");
-        while(((ListIterator<?>) iter).hasPrevious()){
+        // Backward iteration
+        System.out.println("Backward Iterator-------------");
+        while(((ListIterator<?>)iter).hasPrevious()){
             System.out.println(((ListIterator<?>) iter).previous());
         }
 
+        // 3. forEach loop
+        System.out.println("forEach loop-------------");
+        for(Student each : studentList){
+            System.out.println(each);
+        }
 
-        // 3. for each loop
-        System.out.println("Printing For each loop..........");
-        for(Student student:students) System.out.println(student);
+        // 4. Lambda expression
+        System.out.println("forEach loop w/ Lambda expression-------------");
+        studentList.forEach(student -> System.out.println(student));
 
-        System.out.println("Printing with Lambda..........");
-        // 4. Lambda
-        students.forEach(student -> System.out.println(student) );
-        // Sorting Elements in List
-        System.out.println("Printing with sorted List by comp..........");
-        Collections.sort(students,new sortByIdDesc());
-        System.out.println(students);
-        System.out.println("Printing with sorted List by Name Desc..........");
-        Collections.sort(students,new sortByNameDesc());
-        System.out.println(students);
+        // Sort elements in list
+        System.out.println("Printing w/ sorted List by comp-------------");
+        Collections.sort(studentList, new ArrayListReview2.sortByIdDesc());
+        System.out.println(studentList);
+
+        System.out.println("Printing w/ sorted List by comp name-------------");
+        Collections.sort(studentList, new ArrayListReview2.sortByNameDesc());
+        System.out.println(studentList);
+
+
+
 
 
     }
@@ -55,6 +69,7 @@ public class ArrayListReview {
             return o1.id-o2.id;
         }
     }
+
     static class sortByNameDesc implements Comparator<Student>{
 
         @Override

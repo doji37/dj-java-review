@@ -50,11 +50,11 @@ public class ArrayListReview {
 
         // Sort elements in list
         System.out.println("Printing w/ sorted List by comp-------------");
-        Collections.sort(studentList, new ArrayListReview2.sortByIdDesc());
+        Collections.sort(studentList, new sortByIdDesc());
         System.out.println(studentList);
 
         System.out.println("Printing w/ sorted List by comp name-------------");
-        Collections.sort(studentList, new ArrayListReview2.sortByNameDesc());
+        Collections.sort(studentList, new sortByNameDesc());
         System.out.println(studentList);
 
 

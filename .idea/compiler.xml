@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="oop-review" />
-        <module name="lambda" />
         <module name="collection-review" />
         <module name="generics" />
         <module name="lambda2" />
         <module name="streams" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lambda" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

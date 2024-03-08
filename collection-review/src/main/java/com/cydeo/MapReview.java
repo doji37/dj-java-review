@@ -40,10 +40,7 @@ public class MapReview {
                 return ch;
             }
         }
-        return Character.MIN_VALUE;
+        return null;
     }
-
-
-
 
 }

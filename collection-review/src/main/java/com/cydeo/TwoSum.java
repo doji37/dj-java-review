@@ -29,7 +29,7 @@ public class TwoSum {
         return new int[]{};
     }
 
-    // Optimal solution
+    // Optimal solution O(n)
     // 1. Use HashMap to iterate array and put each (value & index) to a map
     // 2. Start iteration again
     public static int[] twoSum2(int[] array, int target) {

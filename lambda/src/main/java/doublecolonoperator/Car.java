@@ -1,10 +1,10 @@
 package doublecolonoperator;
 
-import lombok.Getter;
-import lombok.Setter;
+//import lombok.Getter;
+//import lombok.Setter;
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 public class Car {
 
     private String make;

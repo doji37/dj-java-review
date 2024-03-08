@@ -1,12 +1,12 @@
-import lombok.*;
+//import lombok.*;
 
 import java.util.Objects;
 
 //@NoArgsConstructor
-@AllArgsConstructor
-@Data
-//@Getter
-//@Setter
+//@AllArgsConstructor
+//@Data
+////@Getter
+////@Setter
 //@ToString
 //@EqualsAndHashCode
 //@RequiredArgsConstructor

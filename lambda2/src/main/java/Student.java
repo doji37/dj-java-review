@@ -2,14 +2,16 @@ import lombok.*;
 
 import java.util.Objects;
 
-@NoArgsConstructor
-@AllArgsConstructor(AccessLevel.PRIVATE)
+
+@AllArgsConstructor
+// @Data includes (@NoArgsConstructor@Data@Getter@Setter@ToString@EqualsAndHashCode@RequiredArgsConstructor)
 @Data
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
-// @RequiredArgsConstructor includes NoArgsConstructor
+//@NoArgsConstructor
+//@Data
+//@Getter
+//@Setter
+//@ToString
+//@EqualsAndHashCode
 // @RequiredArgsConstructor
 public class Student {
 

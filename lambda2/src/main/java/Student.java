@@ -1,7 +1,8 @@
-import lombok.*;
-
 import java.util.Objects;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.*;
 
 @AllArgsConstructor
 // @Data includes (@NoArgsConstructor@Data@Getter@Setter@ToString@EqualsAndHashCode@RequiredArgsConstructor)

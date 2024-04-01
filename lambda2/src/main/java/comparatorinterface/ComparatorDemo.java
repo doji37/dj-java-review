@@ -2,6 +2,8 @@ package comparatorinterface;
 
 import java.util.*;
 
+import static java.util.Comparator.comparing;
+
 public class ComparatorDemo {
 
     public static void main(String[] args){
@@ -32,9 +34,22 @@ public class ComparatorDemo {
         System.out.println(list);
 
 
+        // Comparator.comparing()
+        List<Apple> myInventory = Arrays.asList(
+                new Apple(80, Color.GREEN),
+                new Apple(155, Color.RED),
+                new Apple(120, Color.GREEN)
+        );
+
+        Comparator<Apple> sortApple = comparing( apple -> apple.getWeight());
+        myInventory.sort(sortApple);
+        System.out.println(myInventory);
 
 
-
+        // Remove class name and directly call static method by importing
+        // import static java.util.Comparator.comparing;
+        myInventory.sort(comparing((apple) -> apple.getWeight()));
+        myInventory.sort(comparing(Apple::getWeight));
 
 
 

@@ -51,10 +51,12 @@ public class ComparatorDemo {
         myInventory.sort(comparing((apple) -> apple.getWeight()));
         myInventory.sort(comparing(Apple::getWeight));
 
+
         // Reversed
         System.out.println("Reversed---------------");
         myInventory.sort(comparing(Apple::getWeight).reversed());
         System.out.println(myInventory);
+
 
         // Chaining
         System.out.println("Chaining methods------");
